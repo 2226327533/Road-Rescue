@@ -1,0 +1,28 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.url">
+			jdbc:mysql://localhost:3306/heilong?useUnicode=true&amp;characterEncoding=utf-8
+		</property>
+		<property name="hibernate.connection.driver_class">
+			com.mysql.jdbc.Driver
+		</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">kismet</property>
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.MySQLDialect
+		</property>
+		<property name="show_sql">true</property>
+		<!-- 	<mapping class="com.blog.vo.User" /> -->
+		<mapping resource="./User.hbm.xml" />
+		<mapping resource="./Menu.hbm.xml" />
+		<mapping resource="./Driver.hbm.xml" />
+		<mapping resource="./Rescueapply.hbm.xml" />
+		<mapping resource="./Role_menu.hbm.xml" />
+		<mapping resource="./Car_information.hbm.xml" />
+		<mapping resource="./Role.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

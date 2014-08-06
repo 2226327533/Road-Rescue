@@ -1,0 +1,231 @@
+@CHARSET "UTF-8";
+/* GENERAL ------------------------------------------------------------------ */
+
+/* Zero default margin & padding around common elements */
+body,dd,dl,dt,form,h1,h2,h3,h4,h5,h6,ul,ol,li,p {
+	margin: 0;
+	border: none;
+	padding: 0;
+}
+
+body {
+	background: url("../img/bg.jpg");
+	background-repeat: repeat;
+	color: #383838;
+	line-height: 1.5;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: center;
+}
+
+a:link {
+	color: #003399;
+}
+
+a:visited {
+	color: #B266B2;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* PAGE CONTAINERS ---------------------------------------------------------- */
+#page {
+	width: 600px;
+	min-height: 300px;
+	margin: 76px auto;
+	box-shadow: 0px 1px 10px #FFFFFF;
+	background-color: #FFFFFF;
+}
+
+* html #page {
+	height: 100%;
+}
+
+/* HEADER ------------------------------------------------------------------- */
+#header {
+	background: url("../img/ui-bg_gloss-wave_60_fece2f_500x100.png")
+		repeat-x scroll 50% 50% #FECE2F;
+}
+
+h1 {
+	font-size: 2.2em;
+	font-weight: normal;
+	line-height: 82px;
+}
+
+/* CONTENT ------------------------------------------------------------------ */
+#content {
+	padding: 25px;
+}
+
+p {
+	font-size: 1.1em;
+	margin-top: 1.5em;
+}
+
+/*** MASTER FORM WIDTHS - CUSTOMIZE THIS TO CHANGE THE FORM LAYOUT ***/
+
+form label {
+	padding: 0px 10px;
+	width: 160px;
+}
+
+form label.error,form input.submit {
+	margin-left: 180px !important;
+}
+
+form .text {
+	width: 200px;
+	height: 25px;
+}
+
+/*** FIELDSETS AND LEGENDS ***/
+form {
+	width: 550px;
+	clear: both;
+}
+
+form fieldset{margin-bottom: 10px;}
+form legend {
+	color: #4C3000;
+	font-size: 1.3em;
+	font-weight: bold;
+	font-variant: small-caps;
+	margin-left: 1em;
+	padding: 0px 5px;
+}
+
+form fieldset p {
+	margin: 10px 0px 0px 10px;
+}
+
+/*** FORM BLOCKS ***/
+form ul {
+	padding: 5px 10px;
+	list-style: none;
+}
+
+form li {
+	width: 100%;
+	padding: 5px 0px;
+	border-top: 1px dotted #ccc;
+	display: block;
+	float: left;
+	clear: left;
+}
+
+form li:first-child {
+	border: none;
+}
+
+/*** FORM BLOCK ELEMENTS ***/
+form label {
+	padding: 0px 10px;
+	width: 160px;
+	float: left;
+}
+
+form .error {
+	color: #c00;
+}
+
+form label.error {
+	color: #c00;
+	font-size: 100%;
+	font-weight: bold;
+	font-variant: small-caps;
+	width: 308px;
+	display: none;
+	margin: 8px 0px 0px 180px;
+	padding: 3px 0px 0px 5px;
+	clear: both;
+}
+
+form label.info {
+	font-size: 100%;
+	font-weight: bold;
+	font-variant: small-caps;
+	margin: 8px 0px 0px 180px;
+	padding: 3px 0px 0px 5px;
+}
+
+form label label.error {
+	margin-left: 0px;
+}
+
+/*** FORM ELEMENTS ***/
+form input[type="submit"] {
+	border: solid 1px #D19405;
+	background: url("../img/ui-bg_gloss-wave_60_fece2f_500x100.png")
+		repeat-x scroll 50% 50% #FECE2F;
+	padding: 10px;
+	font-size: 14px;
+	color: #4C3000;
+	font-weight: bold;
+	cursor: pointer;
+	width: 200px;
+}
+
+form input,form label {
+	font-size: 1.1em;
+	line-height: 1.6em;
+}
+
+form .input[type="text"] {
+	padding: 1px;
+}
+
+/*** SUPPORTING CLASSES ***/
+form span.required {
+	padding-right: 15px;
+	background-image: url(../img/required_star.gif);
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+form .clean {
+	border: none;
+}
+
+form .info {
+	padding-top: 0.5em;
+	font-size: 80%;
+	line-height: 100%;
+	color: #aaa;
+}
+
+form label.disabled {
+	color: #aaa;
+}
+
+form .highlight {
+	background-color: #e2e2e2;
+}
+
+.off {
+	display: none !important;
+}
+
+.clear {
+	clear: both;
+}
+
+.red {
+	color: #c00;
+	font-size: 100%;
+	font-weight: bold;
+	font-variant: small-caps;
+	display: block;
+	margin-bottom: 5px;
+}
+
+#login ul {
+	text-align: left;
+}
+
+.errorbox span {
+	color: #CC0000;
+	font-weight: bold;
+}

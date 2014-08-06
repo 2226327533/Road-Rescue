@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-3-24 18:52:51 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping package="com.auth.pojo">
+    <class name="Role" table="role" catalog="heilong">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="deptId" type="java.lang.Integer">
+            <column name="dept_id" />
+        </property>
+        <set name="roleMenus" table="role_menu" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="r_id" />
+            </key>
+            <one-to-many class="RoleMenu" />
+        </set>
+        <set name="users" table="user" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="r_id" />
+            </key>
+            <one-to-many class="User" />
+        </set>
+    </class>
+</hibernate-mapping>

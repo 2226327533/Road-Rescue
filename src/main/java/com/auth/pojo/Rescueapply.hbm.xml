@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-3-24 18:52:51 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping package="com.auth.pojo">
+    <class name="Rescueapply" table="rescueapply" catalog="heilong">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="applytime" type="string">
+            <column name="applytime" length="30" />
+        </property>
+        <property name="enteringtime" type="string">
+            <column name="enteringtime" length="30" />
+        </property>
+        <property name="applyperson" type="string">
+            <column name="applyperson" />
+        </property>
+        <property name="casenum" type="string">
+            <column name="casenum" length="20" />
+        </property>
+        <property name="applyphone" type="string">
+            <column name="applyphone" length="20" />
+        </property>
+        <property name="accidentcause" type="string">
+            <column name="accidentcause" length="65535" />
+        </property>
+        <property name="rescueaddr" type="string">
+            <column name="rescueaddr" />
+        </property>
+        <property name="carnum" type="string">
+            <column name="carnum" />
+        </property>
+        <property name="motorcycle" type="string">
+            <column name="motorcycle" />
+        </property>
+        <property name="carcolor" type="string">
+            <column name="carcolor" />
+        </property>
+        <property name="destination" type="string">
+            <column name="destination" />
+        </property>
+        <property name="destinationtype" type="string">
+            <column name="destinationtype" />
+        </property>
+        <property name="estimatedcost" type="java.lang.Float">
+            <column name="estimatedcost" precision="12" scale="0" />
+        </property>
+        <property name="memo" type="string">
+            <column name="memo" length="65535" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" />
+        </property>
+        <property name="scheduleperson" type="string">
+            <column name="scheduleperson" />
+        </property>
+        <property name="dispatchnum" type="string">
+            <column name="dispatchnum" />
+        </property>
+        <property name="dispatchtime" type="string">
+            <column name="dispatchtime" length="30" />
+        </property>
+        <property name="rescuecar" type="string">
+            <column name="rescuecar" />
+        </property>
+        <property name="driver" type="string">
+            <column name="driver" length="10" />
+        </property>
+        <property name="driverphone" type="string">
+            <column name="driverphone" length="20" />
+        </property>
+        <property name="rescuememo" type="string">
+            <column name="rescuememo" length="65535" />
+        </property>
+        <property name="returntime" type="string">
+            <column name="returntime" />
+        </property>
+        <property name="mileage" type="string">
+            <column name="mileage" />
+        </property>
+        <property name="realcost" type="java.lang.Float">
+            <column name="realcost" precision="12" scale="0" />
+        </property>
+        <property name="incomebalance" type="java.lang.Float">
+            <column name="incomebalance" precision="12" scale="0" />
+        </property>
+        <property name="finalcost" type="java.lang.Float">
+            <column name="finalcost" precision="12" scale="0" />
+        </property>
+        <property name="returmemo" type="string">
+            <column name="returmemo" length="65535" />
+        </property>
+        <property name="paytype" type="string">
+            <column name="paytype" length="20" />
+        </property>
+        <property name="ifpay" type="string">
+            <column name="ifpay" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

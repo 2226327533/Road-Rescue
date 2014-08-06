@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.2.xsd
+	http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+	<!-- dao -->
+	<bean id="driverDao" class="com.auth.dao.Impl.DriverDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="rescueCarDao" class="com.auth.dao.Impl.RescueCarDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="reportDao" class="com.auth.dao.Impl.ReportDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="carDao" class="com.auth.dao.Impl.CarDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- service -->
+	<bean id="driverService" class="com.auth.services.Impl.DriverServiceImpl">
+		<property name="driverDao" ref="driverDao"></property>
+	</bean>
+	<bean id="rescueCarService" class="com.auth.services.Impl.RescueCarServiceImpl">
+		<property name="rescueCarDao" ref="rescueCarDao"></property>
+	</bean>
+	
+	<bean id="reportService" class="com.auth.services.Impl.ReportServiceImpl">
+		<property name="reportDao" ref="reportDao"/>
+		<property name="carDao" ref="carDao"/>
+	</bean>
+	
+	<bean id="carService" class="com.auth.services.Impl.CarServiceImpl">
+		<property name="carDao" ref="carDao"/>
+	</bean>
+	<!-- controller -->
+</beans>
